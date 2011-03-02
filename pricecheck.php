@@ -14,6 +14,7 @@ $amazonItemMax = 1;     //-1 = all items
 //type    : [Optional] http://www.amazon.com/gp/seller/asin-upc-isbn-info.html
 //search  : [Optional] Amazon search index option (http://docs.amazonwebservices.com/AWSEcommerceService/4-0/ApiReference/SearchIndexValues.html)
 //num     : [Optional] Return number of items (if omitted, the default value will be used. set -1 to get all possible num. of items)
+//output  : [Optional] xml/json/raw (default: raw)
 
 //Exceptable URL QueryStrings Formats
 // http://example.com/amazon.php?q=vizio
@@ -188,7 +189,7 @@ if ($q_item)
     curl_setopt($curl_handle,CURLOPT_RETURNTRANSFER,1);
     $data = curl_exec($curl_handle);
 
-    if ($q_output == "raw")
+    if ($q_output == "raw" || $q_output == null)
     {
         header ("Content-Type:text/xml");
         echo $data;
