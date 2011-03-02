@@ -16,9 +16,10 @@ $amazonItemMax = 1;     //-1 = all items
 //num     : [Optional] Return number of items (if omitted, the default value will be used. set -1 to get all possible num. of items)
 //output  : [Optional] xml/json/raw (default: raw)
 
-//Exceptable URL QueryStrings Formats
+//URL QueryStrings Format Examples
 // http://example.com/amazon.php?q=vizio
-// http://example.com/amazon.php?q=vizio&output=raw
+// http://example.com/amazon.php?q=vizio&output=json
+// http://example.com/amazon.php?q=9780764547164
 // http://example.com/amazon.php?q=9780764547164&type=UPC
 // http://example.com/amazon.php?q=9780764547164&type=ISBN&search=books
 // http://example.com/amazon.php?q=9780764547164&type=ISBN&search=books&num=3
